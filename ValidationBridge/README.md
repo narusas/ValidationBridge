@@ -4,7 +4,9 @@ I work with spring, JPA, Bean Validation and jquery.
 
 I wrote validation rule twice every time. Java(Bean Validation) and Javascript(jQuery Validation)
 
-I hate this. If I change validation rule, write twice. Sometimes I forgot modify another site, Application go wrong.
+If I change validation rule, write twice. Sometimes I forgot to modify another side, Application go wrong.
+
+I hate this. 
 
 So I make this library.
 
