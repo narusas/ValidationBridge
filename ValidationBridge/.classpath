@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container" exported="true"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.hibernate/hibernate-validator/4.3.1.Final/source/baa1c6895a34d8d6423da93d09cb3bed665b1b24/hibernate-validator-4.3.1.Final-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.hibernate/hibernate-validator/4.3.1.Final/jar/49b31d8ea51fa21cc78a89e9d4ddb11d6bfb4669/hibernate-validator-4.3.1.Final.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/slf4j-api/1.7.5/source/654135274d4c27132ea208a4ec07f344bdb83bcb/slf4j-api-1.7.5-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/slf4j-api/1.7.5/jar/6b262da268f8ad9eff941b25503a9198f0a0ac93/slf4j-api-1.7.5.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/jcl-over-slf4j/1.7.5/source/92082dc61252ea28d770c32c969ce809949526fc/jcl-over-slf4j-1.7.5-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/jcl-over-slf4j/1.7.5/jar/cd5970bd13fa85f7bed41ca606d6daf7cbf1365/jcl-over-slf4j-1.7.5.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/log4j-over-slf4j/1.7.5/source/470c84a4c4b1e72068121c571b48eb0cac382bea/log4j-over-slf4j-1.7.5-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/log4j-over-slf4j/1.7.5/jar/bf39ccad53c1f695f32d610ce7f0e5bf9895b262/log4j-over-slf4j-1.7.5.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/ch.qos.logback/logback-core/1.0.13/source/c353276a7cee7e2271c4a4115f1d2948ff5adb0a/logback-core-1.0.13-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/ch.qos.logback/logback-core/1.0.13/jar/dc6e6ce937347bd4d990fc89f4ceb469db53e45e/logback-core-1.0.13.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/ch.qos.logback/logback-classic/1.0.13/source/63fcf702193934c1aa1ea606093f75ac08b283ee/logback-classic-1.0.13-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/ch.qos.logback/logback-classic/1.0.13/jar/6b56ec752b42ccfa1415c0361fb54b1ed7ca3db6/logback-classic-1.0.13.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.projectlombok/lombok/0.11.8/source/c34c03b4e61991c32a7ad9ae37c3baccde4951d3/lombok-0.11.8-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.projectlombok/lombok/0.11.8/jar/e43ce2be16d8990568a4182c0bf996ad3ff0ba42/lombok-0.11.8.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.apache.commons/commons-lang3/3.1/source/8d30b90ae8bda4fbac8363161c8a9b5a99e23baf/commons-lang3-3.1-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.apache.commons/commons-lang3/3.1/jar/905075e6c80f206bbe6cf1e809d2caa69f420c76/commons-lang3-3.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-context/3.2.3.RELEASE/source/e10159a6d919b677a0b85d5b19afae0856c665fa/spring-context-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-context/3.2.3.RELEASE/jar/12ad5920647556704f79cc579d4e133430741c5/spring-context-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-context-support/3.2.3.RELEASE/source/78e149963aa7f58fde17ae475eed74e09cdd990f/spring-context-support-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-context-support/3.2.3.RELEASE/jar/9c8034c5cc7cb2a9603549577e66035248be64e5/spring-context-support-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-core/3.2.3.RELEASE/source/c923c5360b7bba4209020a4796c6d53f68063d0f/spring-core-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-core/3.2.3.RELEASE/jar/accdd65db57e79e49f2af037bb76f5a55a580f00/spring-core-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-expression/3.2.3.RELEASE/source/a89bdcdf4582c89ba9152f02aee5951b02885be2/spring-expression-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-expression/3.2.3.RELEASE/jar/51e4c94a79892c0a2d15c5efda8c5b336ebf5c37/spring-expression-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-webmvc/3.2.3.RELEASE/source/35f1ac5640cac763d74681d16544cb77f40765f5/spring-webmvc-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-webmvc/3.2.3.RELEASE/jar/6d6d1b53c53dbefd0d8c15f2d5c194ced1f8d53c/spring-webmvc-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-test/3.2.3.RELEASE/source/2754a321d827c01045f29a8ca2c6f66122be393/spring-test-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-test/3.2.3.RELEASE/jar/b431cc81467f229346d23ea6d3f7a17558b1e368/spring-test-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/javax.validation/validation-api/1.0.0.GA/source/7a561191db2203550fbfa40d534d4997624cd369/validation-api-1.0.0.GA-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/javax.validation/validation-api/1.0.0.GA/jar/b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e/validation-api-1.0.0.GA.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.jboss.logging/jboss-logging/3.1.0.CR2/source/53dd1691828c99b7e7b353c9b0ad374fe7d73ef5/jboss-logging-3.1.0.CR2-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.jboss.logging/jboss-logging/3.1.0.CR2/jar/28725380c07f917ace4e511db21cc45e9ae5a72b/jboss-logging-3.1.0.CR2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/commons-logging/commons-logging/1.1.1/source/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/commons-logging-1.1.1-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/commons-logging/commons-logging/1.1.1/jar/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-beans/3.2.3.RELEASE/source/3a9f1fb6f5b5da1189c5da7673bf11738ffa956f/spring-beans-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-beans/3.2.3.RELEASE/jar/a48eb92ef51e0aed7d23dcaa54225b8f24808db4/spring-beans-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/aopalliance/aopalliance/1.0/source/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/aopalliance/aopalliance/1.0/jar/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-aop/3.2.3.RELEASE/source/5f6558e10e092670a9d42bf86185938535049616/spring-aop-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-aop/3.2.3.RELEASE/jar/a70bec95e45a29cad126d250699d0ed0fedfe28a/spring-aop-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-web/3.2.3.RELEASE/source/913394ac47d255c3473d48619102255599845695/spring-web-3.2.3.RELEASE-sources.jar" kind="lib" path="/Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-web/3.2.3.RELEASE/jar/833c5e9a60f82209a3f669a5026dfa8de57c1df3/spring-web-3.2.3.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+</classpath>

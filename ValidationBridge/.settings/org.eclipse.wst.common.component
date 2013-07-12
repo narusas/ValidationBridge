@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="ValidationBridge">
+		<wb-resource deploy-path="/" source-path="/WebContent"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+		<property name="java-output-path" value="/ValidationBridge/build/classes"/>
+        <property name="context-root" value="ValidationBridge"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.jboss.logging/jboss-logging/3.1.0.CR2/jar/28725380c07f917ace4e511db21cc45e9ae5a72b/jboss-logging-3.1.0.CR2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/javax.validation/validation-api/1.0.0.GA/jar/b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e/validation-api-1.0.0.GA.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-webmvc/3.2.3.RELEASE/jar/6d6d1b53c53dbefd0d8c15f2d5c194ced1f8d53c/spring-webmvc-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-beans/3.2.3.RELEASE/jar/a48eb92ef51e0aed7d23dcaa54225b8f24808db4/spring-beans-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-core/3.2.3.RELEASE/jar/accdd65db57e79e49f2af037bb76f5a55a580f00/spring-core-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-aop/3.2.3.RELEASE/jar/a70bec95e45a29cad126d250699d0ed0fedfe28a/spring-aop-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/log4j-over-slf4j/1.7.5/jar/bf39ccad53c1f695f32d610ce7f0e5bf9895b262/log4j-over-slf4j-1.7.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.hibernate/hibernate-validator/4.3.1.Final/jar/49b31d8ea51fa21cc78a89e9d4ddb11d6bfb4669/hibernate-validator-4.3.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-context/3.2.3.RELEASE/jar/12ad5920647556704f79cc579d4e133430741c5/spring-context-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-expression/3.2.3.RELEASE/jar/51e4c94a79892c0a2d15c5efda8c5b336ebf5c37/spring-expression-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-web/3.2.3.RELEASE/jar/833c5e9a60f82209a3f669a5026dfa8de57c1df3/spring-web-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/aopalliance/aopalliance/1.0/jar/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/ch.qos.logback/logback-core/1.0.13/jar/dc6e6ce937347bd4d990fc89f4ceb469db53e45e/logback-core-1.0.13.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/ch.qos.logback/logback-classic/1.0.13/jar/6b56ec752b42ccfa1415c0361fb54b1ed7ca3db6/logback-classic-1.0.13.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-test/3.2.3.RELEASE/jar/b431cc81467f229346d23ea6d3f7a17558b1e368/spring-test-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.projectlombok/lombok/0.11.8/jar/e43ce2be16d8990568a4182c0bf996ad3ff0ba42/lombok-0.11.8.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/jcl-over-slf4j/1.7.5/jar/cd5970bd13fa85f7bed41ca606d6daf7cbf1365/jcl-over-slf4j-1.7.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.apache.commons/commons-lang3/3.1/jar/905075e6c80f206bbe6cf1e809d2caa69f420c76/commons-lang3-3.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.springframework/spring-context-support/3.2.3.RELEASE/jar/9c8034c5cc7cb2a9603549577e66035248be64e5/spring-context-support-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/commons-logging/commons-logging/1.1.1/jar/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/narusas/.gradle/caches/artifacts-24/filestore/org.slf4j/slf4j-api/1.7.5/jar/6b262da268f8ad9eff941b25503a9198f0a0ac93/slf4j-api-1.7.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>

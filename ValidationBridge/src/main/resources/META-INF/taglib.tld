@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<description>JSR 302 validation to jQuery validation rule converter</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>valid</short-name>
+	<uri>http://www.narusas.net/tags/valid</uri>
+
+	<tag>
+		<description>JSR 302 validation to jQuery validation rule converter</description>
+		<name>validationRules</name>
+		<tag-class>net.narusas.jstl.validate.ValidationRulesTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>Bean had JSR-303 validations rules</description>
+			<name>ruleBean</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>Class had JSR-303 validations rules</description>
+			<name>ruleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<dynamic-attributes>false</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<description>JSR 302 validation to jQuery validation message converter</description>
+		<name>validationMessages</name>
+		<tag-class>net.narusas.jstl.validate.ValidationMessageTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>Bean had JSR-303 validations rules</description>
+			<name>ruleBean</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>Class had JSR-303 validations rules</description>
+			<name>ruleClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<dynamic-attributes>false</dynamic-attributes>
+	</tag>
+</taglib>

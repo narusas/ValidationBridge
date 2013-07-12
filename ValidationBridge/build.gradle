@@ -1,0 +1,58 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin:	'eclipse-wtp'
+
+
+repositories {
+	mavenCentral()
+}
+
+configurations { provided }
+
+
+sourceCompatibility = 1.6
+def SLF4J_VERSION='1.7.5' // SLF4J는 1.7이상 부터 JDK1.5+ varargs를 사용하게 변경됨
+def SPRING_RELEASE_VERSION='3.2.3.RELEASE'
+
+
+sourceSets {
+	main {
+		java { srcDir 'src/main/java' }
+		resources {  srcDir 'src/main/resources'  }
+		compileClasspath += configurations.provided
+	}
+
+	test {
+		java { srcDir 'src/test/java' }
+		resources { srcDir 'src/test/resources' }
+		compileClasspath += configurations.provided
+	}
+}
+
+dependencies {
+	compile (
+		[group: 'org.hibernate', name: 'hibernate-validator', version:'4.3.1.Final'],
+		[group: 'org.slf4j', name: 'slf4j-api', version:SLF4J_VERSION],
+		[group: 'org.slf4j', name: 'jcl-over-slf4j', version:SLF4J_VERSION],
+		[group: 'org.slf4j', name: 'log4j-over-slf4j', version:SLF4J_VERSION],
+		[group: 'ch.qos.logback', name: 'logback-core', version:'1.0.13'],
+		[group: 'ch.qos.logback', name: 'logback-classic', version:'1.0.13'],
+		[group: 'org.projectlombok', name: 'lombok', version:'0.11.8'],
+		[group: 'org.apache.commons', name: 'commons-lang3', version:'3.1'],
+		
+		[group: 'org.springframework', name: 'spring-context', version: SPRING_RELEASE_VERSION],
+		[group: 'org.springframework', name: 'spring-context-support', version: SPRING_RELEASE_VERSION],
+		[group: 'org.springframework', name: 'spring-core', version: SPRING_RELEASE_VERSION],
+		[group: 'org.springframework', name: 'spring-expression', version: SPRING_RELEASE_VERSION],
+		[group: 'org.springframework', name: 'spring-webmvc', version: SPRING_RELEASE_VERSION],
+		[group: 'org.springframework', name: 'spring-test', version: SPRING_RELEASE_VERSION],
+	)
+	
+	provided(
+		[group: 'javax.servlet', name: 'servlet-api', version:'2.5'],
+		[group: 'javax.servlet', name: 'jsp-api', version:'2.0'],
+		[group: 'javax.servlet', name: 'jstl', version:'1.2'],
+	)
+	
+}
