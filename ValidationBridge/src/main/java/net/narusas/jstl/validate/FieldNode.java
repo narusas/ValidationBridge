@@ -8,11 +8,12 @@ import java.util.List;
 import javax.validation.Constraint;
 import javax.validation.Valid;
 
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.context.MessageSource;
-
 import lombok.Getter;
 import lombok.Setter;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.MessageSource;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Getter
 @Setter
@@ -35,12 +36,20 @@ public class FieldNode {
 
 	boolean hasConstraint(Annotation[] annotations) {
 		for (Annotation annotation : annotations) {
-			Class<? extends Annotation> types = annotation.annotationType();
-			if (types.getAnnotation(Constraint.class) != null) {
+			Class<? extends Annotation> type = annotation.annotationType();
+			if (isConstraintType(type) || isExtraSupportType(type)) {
 				return true;
 			}
 		}
 		return false;
+	}
+
+	private boolean isConstraintType(Class<? extends Annotation> type) {
+		return type.getAnnotation(Constraint.class) != null;
+	}
+
+	private boolean isExtraSupportType(Class<? extends Annotation> type) {
+		return DateTimeFormat.class.isAssignableFrom(type);
 	}
 
 	public boolean isConstraintedField() {
@@ -59,10 +68,14 @@ public class FieldNode {
 			fieldCollector.collect(collection, field.getType(), this);
 		}
 	}
+	
+	public String getName() {
+		return field.getName();
+	}
 
 	@Override
 	public String toString() {
-		return "'"+parentName() + field.getName() +"':{"+StringUtils.join(rules,',')+"}";
+		return "'"+parentName() + getName() +"':{"+StringUtils.join(rules,',')+"}";
 	}
 
 	String parentName() {

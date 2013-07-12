@@ -37,7 +37,7 @@ public class FieldCollectorTest {
 		List<FieldNode> nodes = c.collect(Rule11.class);
 		assertNotNull(nodes);
 		assertEquals(4, nodes.size());
-		assertEquals("[authority.created, authority.name, licensedTime, no]", nodes.toString());
+		assertEquals("['authority.created':{}, 'authority.name':{}, 'licensedTime':{}, 'no':{}]", nodes.toString());
 	}
 	
 	@Test
@@ -46,7 +46,7 @@ public class FieldCollectorTest {
 		List<FieldNode> nodes = c.collect(Rule10.class);
 		assertNotNull(nodes);
 		assertEquals(6, nodes.size());
-		assertEquals("[age, license.authority.created, license.authority.name, license.licensedTime, license.no, name]", nodes.toString());
+		assertEquals("['age':{}, 'license.authority.created':{}, 'license.authority.name':{}, 'license.licensedTime':{}, 'license.no':{}, 'name':{}]", nodes.toString());
 	}
 
 }

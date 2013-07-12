@@ -1,9 +1,11 @@
 package net.narusas.jstl.validate.rules;
 
-import net.narusas.jstl.validate.*;
+import lombok.Getter;
+import net.narusas.jstl.validate.ConvertRule;
 
 import org.hibernate.validator.constraints.Length;
 
+@Getter
 public class LengthRule extends ConvertRule {
 	private long min;
 	private long max;

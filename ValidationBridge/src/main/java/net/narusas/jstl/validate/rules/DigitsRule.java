@@ -23,7 +23,12 @@ public class DigitsRule extends ConvertRule {
 
 	@Override
 	public String toRuleString() {
-		return ruleName + ":  true";
+		if (fractionPart == 0) {
+			return ruleName + ": true, regex: /^[-]?\\d{0,"+integerPart+"}$/";
+		}
+		else {
+			return ruleName + ": true, regex: /^[-]?\\d{0,"+integerPart+"}(\\.\\d{0,"+fractionPart+"})?$/";
+		}
 	}
 
 	@Override

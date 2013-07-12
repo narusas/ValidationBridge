@@ -14,7 +14,6 @@ public class NotNullRule extends ConvertRule {
 	}
 
 	public String toMessageString() {
-
 		return "required: '" + getMessageFromSource(message) + "'";
 	}
 
