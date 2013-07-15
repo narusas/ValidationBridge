@@ -3,7 +3,8 @@
 <properties>
 	<entry key="ANOTHER_SPRING_MESSAGE">You can use message source.</entry>
 	
-	
+	<entry key="net.narusas.jstl.validate.ValidDateTimeFormat">Date format is invalid.</entry>
+				
 	<entry key="javax.validation.constraints.AssertFalse.message">must be false</entry>
 	<entry key="javax.validation.constraints.AssertTrue.message">must be true</entry>
 	<entry key="javax.validation.constraints.DecimalMax.message">must be less than or equal to {value}</entry>

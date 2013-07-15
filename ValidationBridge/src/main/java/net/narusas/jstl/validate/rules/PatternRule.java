@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Pattern.Flag;
 
@@ -12,7 +14,7 @@ public class PatternRule extends ConvertRule {
 	private Flag[] flags;
 	
 
-	public PatternRule(Pattern annotation, Class<?> type) {
+	public PatternRule(Pattern annotation, Field field) {
 		super(annotation.message());
 		regexp= annotation.regexp();
 		flags = annotation.flags();

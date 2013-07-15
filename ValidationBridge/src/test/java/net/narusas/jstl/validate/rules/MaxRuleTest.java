@@ -30,7 +30,7 @@ public class MaxRuleTest extends RuleTestBase {
 	@Test
 	public void premitiveIntType() {
 		FieldAnnotaion<Max> entry = getFieldAnnotation(RuleClass1.class, "intValue", Max.class);
-		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField().getType());
+		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField());
 		assertEquals(10, rule.getMaxLength());
 		assertEquals("max", rule.getRuleName());
 		assertEquals("max: 10", rule.toRuleString());
@@ -39,7 +39,7 @@ public class MaxRuleTest extends RuleTestBase {
 	@Test
 	public void numberObjectType() {
 		FieldAnnotaion<Max> entry = getFieldAnnotation(RuleClass1.class, "integerValue", Max.class);
-		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField().getType());
+		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField());
 		assertEquals(12, rule.getMaxLength());
 		assertEquals("max", rule.getRuleName());
 	}
@@ -47,16 +47,16 @@ public class MaxRuleTest extends RuleTestBase {
 	@Test
 	public void stringValue() {
 		FieldAnnotaion<Max> entry = getFieldAnnotation(RuleClass1.class, "stringValue", Max.class);
-		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField().getType());
+		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField());
 		assertEquals(5, rule.getMaxLength());
-		assertEquals("maxlength", rule.getRuleName());
-		assertEquals("maxlength: 5", rule.toRuleString());
+		assertEquals("max", rule.getRuleName());
+		assertEquals("max: 5", rule.toRuleString());
 	}
 
 	@Test
 	public void premitiveLongType() {
 		FieldAnnotaion<Max> entry = getFieldAnnotation(RuleClass1.class, "longValue", Max.class);
-		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField().getType());
+		MaxRule rule = new MaxRule(entry.getAnnotation(), entry.getField());
 		assertEquals(Long.MAX_VALUE, rule.getMaxLength());
 		assertEquals("max", rule.getRuleName());
 	}

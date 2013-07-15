@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import javax.validation.constraints.Size;
 
 import lombok.Getter;
@@ -11,11 +13,11 @@ public class SizeRule extends ConvertRule {
 	private long max;
 	private String ruleName;
 
-	public SizeRule(Size annotation, Class<?> type) {
+	public SizeRule(Size annotation, Field field) {
 		super(annotation.message());
 		min = annotation.min();
 		max = annotation.max();
-		if (String.class.isAssignableFrom(type)) {
+		if (String.class.isAssignableFrom(field.getType())) {
 			ruleName = "rangelength";
 		} else {
 			ruleName = null;

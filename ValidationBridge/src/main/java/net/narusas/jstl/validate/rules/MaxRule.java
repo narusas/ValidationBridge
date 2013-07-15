@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import javax.validation.constraints.Max;
 
 import lombok.Getter;
@@ -10,15 +12,10 @@ public class MaxRule extends ConvertRule {
 	private long maxLength;
 	private String ruleName;
 
-	public MaxRule(Max max, Class<?> type) {
+	public MaxRule(Max max, Field field) {
 		super(max.message());
 		maxLength = max.value();
-		if (type.isPrimitive()  || Number.class.isAssignableFrom(type)){
-			ruleName = "max";
-		}
-		else {
-			ruleName = "maxlength";
-		}
+		ruleName = "max";
 	}
 
 	public String toRuleString() {
@@ -26,6 +23,6 @@ public class MaxRule extends ConvertRule {
 	}
 
 	public String toMessageString() {
-		return ruleName+": '" + getMessageFromSource(message) + "'";
+		return ruleName+": '" + getMessageFromSource(message,new Entry[]{new Entry("value", maxLength)}) + "'";
 	}
 }

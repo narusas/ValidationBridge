@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import javax.validation.constraints.Min;
 
 import lombok.Getter;
@@ -9,15 +11,10 @@ public class MinRule extends ConvertRule {
 	private long minLength;
 	private String ruleName;
 
-	public MinRule(Min min, Class<?> type) {
+	public MinRule(Min min, Field field) {
 		super(min.message());
 		minLength = min.value();
-		if (type.isPrimitive()  || Number.class.isAssignableFrom(type)){
-			ruleName = "min";
-		}
-		else {
-			ruleName = "minlength";
-		}
+		ruleName = "min";
 	}
 
 	public String toRuleString() {
@@ -25,6 +22,6 @@ public class MinRule extends ConvertRule {
 	}
 
 	public String toMessageString() {
-		return ruleName+": '" + getMessageFromSource(message) + "'";
+		return ruleName+": '" + getMessageFromSource(message, new Entry[]{new Entry("value", minLength)}) + "'";
 	}
 }

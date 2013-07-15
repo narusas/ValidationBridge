@@ -33,7 +33,7 @@ public class RulesInspector {
 	}
 
 	public ConvertRule findMatchRule(Field field, Annotation annotation) {
-		return RuleRegistry.findMatchRule(field.getType(), annotation);
+		return RuleRegistry.findMatchRule(field, annotation);
 	}
 
 	public List<FieldNode> collectMessage(List<FieldNode> fieldNodes, MessageSource messageSource) {

@@ -14,7 +14,7 @@ public class EmailRuleTest extends RuleTestBase {
 	@Test
 	public void email() {
 		FieldAnnotaion<Email> entry = getFieldAnnotation(RuleClass1.class, "email", Email.class);
-		EmailRule rule = new EmailRule(entry.getAnnotation(), entry.getField().getType());
+		EmailRule rule = new EmailRule(entry.getAnnotation(), entry.getField());
 		assertEquals("email: true", rule.toRuleString());
 	}
 }

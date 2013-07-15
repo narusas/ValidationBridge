@@ -21,7 +21,7 @@ public class RuleRegistryTest extends RuleTestBase{
 	@Test
 	public void test() {
 		FieldAnnotaion<NotNull> entry = getFieldAnnotation(Rule.class, "stringValue", NotNull.class);
-		ConvertRule rule = RuleRegistry.findMatchRule(entry.getField().getType(), entry.getAnnotation());
+		ConvertRule rule = RuleRegistry.findMatchRule(entry.getField(), entry.getAnnotation());
 		assertNotNull(rule);
 		assertTrue(rule instanceof NotNullRule);
 	}

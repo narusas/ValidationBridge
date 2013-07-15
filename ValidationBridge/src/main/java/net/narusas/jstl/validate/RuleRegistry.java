@@ -2,6 +2,7 @@ package net.narusas.jstl.validate;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,6 +17,7 @@ import net.narusas.jstl.validate.rules.DateFormatRule;
 import net.narusas.jstl.validate.rules.DigitsRule;
 import net.narusas.jstl.validate.rules.EmailRule;
 import net.narusas.jstl.validate.rules.LengthRule;
+import net.narusas.jstl.validate.rules.MaxRule;
 import net.narusas.jstl.validate.rules.MinRule;
 import net.narusas.jstl.validate.rules.NotBlankRule;
 import net.narusas.jstl.validate.rules.NotEmptyRule;
@@ -29,17 +31,16 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
-import org.springframework.format.annotation.DateTimeFormat;
 
 public class RuleRegistry {
 	static Map<Class<? extends Annotation>, Class<? extends ConvertRule>> registry = new HashMap<Class<? extends Annotation>, Class<? extends ConvertRule>>();
 
 	static {
-		register(DateTimeFormat.class, DateFormatRule.class);
+		register(ValidDateTimeFormat.class, DateFormatRule.class);
 		register(Digits.class, DigitsRule.class);
 		register(Email.class, EmailRule.class);
 		register(Length.class, LengthRule.class);
-		register(Max.class, EmailRule.class);
+		register(Max.class, MaxRule.class);
 		register(Min.class, MinRule.class);
 		register(NotBlank.class, NotBlankRule.class);
 		register(NotEmpty.class, NotEmptyRule.class);
@@ -53,17 +54,17 @@ public class RuleRegistry {
 		registry.put(constraint, rule);
 	}
 
-	public static ConvertRule findMatchRule(Class<?> fieldClass, Annotation annotation) {
+	public static ConvertRule findMatchRule(Field field, Annotation annotation) {
 		Class<? extends ConvertRule> ruleClass = registry.get(annotation.annotationType());
 		if (ruleClass == null) {
-			throw new IllegalArgumentException("No match rule " + annotation.annotationType());
+			return null;
 		}
 
 		try {
 			Constructor<? extends ConvertRule> c = ruleClass.getConstructor(new Class[] { annotation.annotationType(),
-					Class.class });
+					Field.class });
 
-			return c.newInstance(new Object[] { annotation, fieldClass });
+			return c.newInstance(new Object[] { annotation, field});
 		} catch (Exception e) {
 			throw new IllegalStateException(e);
 		}

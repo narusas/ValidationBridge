@@ -1,6 +1,9 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import net.narusas.jstl.validate.ConvertRule;
+import net.narusas.jstl.validate.ValidDateTimeFormat;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,9 +13,10 @@ public class DateFormatRule extends ConvertRule {
 
 	private String dateRegex;
 
-	public DateFormatRule(DateTimeFormat annotation, Class<?> type) {
-		super("{net.narusas.jstl.validate.DateTimeFormat}");
-		String datePattern = annotation.pattern();
+	public DateFormatRule(ValidDateTimeFormat annotation, Field field) {
+		super(annotation.message());
+		DateTimeFormat ann = field.getAnnotation(DateTimeFormat.class);
+		String datePattern = ann.pattern();
 		datePattern = StringUtils.replace(datePattern, "yyyy", "\\d{4}");
 		datePattern = StringUtils.replace(datePattern, "yy", "\\d{2}");
 		datePattern = StringUtils.replace(datePattern, "MM", "\\d{1,2}");
@@ -41,8 +45,7 @@ public class DateFormatRule extends ConvertRule {
 
 	@Override
 	public String toMessageString() {
-//		return ruleName + ": '" + getMessageFromSource(message, new Entry[]{new Entry("integer", integerPart), new Entry("fraction", fractionPart)}) + "'";
-		return null;
+		return  "regex: '" + getMessageFromSource(message) + "'";
 	}
 
 }

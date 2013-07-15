@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import javax.validation.constraints.Digits;
 
 import net.narusas.jstl.validate.ConvertRule;
@@ -10,7 +12,7 @@ public class DigitsRule extends ConvertRule {
 	private int fractionPart;
 	private String ruleName;
 
-	public DigitsRule(Digits annotation, Class<?> type) {
+	public DigitsRule(Digits annotation, Field field) {
 		super(annotation.message());
 		integerPart = annotation.integer();
 		fractionPart = annotation.fraction();

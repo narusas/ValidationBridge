@@ -13,7 +13,6 @@ import lombok.Setter;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.MessageSource;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Getter
 @Setter
@@ -37,7 +36,7 @@ public class FieldNode {
 	boolean hasConstraint(Annotation[] annotations) {
 		for (Annotation annotation : annotations) {
 			Class<? extends Annotation> type = annotation.annotationType();
-			if (isConstraintType(type) || isExtraSupportType(type)) {
+			if (isConstraintType(type)) {
 				return true;
 			}
 		}
@@ -48,9 +47,9 @@ public class FieldNode {
 		return type.getAnnotation(Constraint.class) != null;
 	}
 
-	private boolean isExtraSupportType(Class<? extends Annotation> type) {
-		return DateTimeFormat.class.isAssignableFrom(type);
-	}
+//	private boolean isExtraSupportType(Class<? extends Annotation> type) {
+//		return DateTimeFormat.class.isAssignableFrom(type);
+//	}
 
 	public boolean isConstraintedField() {
 		return hasConstraint(annotations);
@@ -75,7 +74,7 @@ public class FieldNode {
 
 	@Override
 	public String toString() {
-		return "'"+parentName() + getName() +"':{"+StringUtils.join(rules,',')+"}";
+		return "'"+parentName() + getName() +"':{"+StringUtils.join(rules,", ")+"}";
 	}
 
 	String parentName() {

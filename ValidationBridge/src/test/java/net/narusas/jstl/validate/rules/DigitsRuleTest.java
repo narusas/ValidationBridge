@@ -22,14 +22,14 @@ public class DigitsRuleTest extends RuleTestBase {
 	@Test
 	public void intValue() {
 		FieldAnnotaion<Digits> entry = getFieldAnnotation(RuleClass1.class, "intValue", Digits.class);
-		DigitsRule rule = new DigitsRule(entry.getAnnotation(), entry.getField().getType());
+		DigitsRule rule = new DigitsRule(entry.getAnnotation(), entry.getField());
 		assertEquals("digits: true, regex: /^[-]?\\d{0,2}$/", rule.toRuleString());
 	}
 	
 	@Test
 	public void floatValue() {
 		FieldAnnotaion<Digits> entry = getFieldAnnotation(RuleClass1.class, "floatValue", Digits.class);
-		DigitsRule rule = new DigitsRule(entry.getAnnotation(), entry.getField().getType());
+		DigitsRule rule = new DigitsRule(entry.getAnnotation(), entry.getField());
 		assertEquals("number: true, regex: /^[-]?\\d{0,2}(\\.\\d{0,3})?$/", rule.toRuleString());
 	}
 	@Test

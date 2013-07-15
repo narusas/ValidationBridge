@@ -32,7 +32,7 @@ public class FieldCollectorTest {
 	}
 	
 	@Test
-	public void test2() {
+	public void walkChildsDepth1() {
 		FieldCollector c = new FieldCollector();
 		List<FieldNode> nodes = c.collect(Rule11.class);
 		assertNotNull(nodes);
@@ -41,7 +41,7 @@ public class FieldCollectorTest {
 	}
 	
 	@Test
-	public void test3() {
+	public void walkChildDeeperDepth() {
 		FieldCollector c = new FieldCollector();
 		List<FieldNode> nodes = c.collect(Rule10.class);
 		assertNotNull(nodes);

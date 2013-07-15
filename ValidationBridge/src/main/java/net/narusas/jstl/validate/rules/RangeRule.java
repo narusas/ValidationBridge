@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import lombok.Getter;
 import net.narusas.jstl.validate.ConvertRule;
 
@@ -11,7 +13,7 @@ public class RangeRule extends ConvertRule {
 	private long max;
 	private String ruleName;
 
-	public RangeRule(Range range, Class<?> type) {
+	public RangeRule(Range range, Field field) {
 		super(range.message());
 		min = range.min();
 		max = range.max();

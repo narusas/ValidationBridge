@@ -14,7 +14,7 @@ public class NotBlankRuleTest extends RuleTestBase {
 	@Test
 	public void stringType() {
 		FieldAnnotaion<NotBlank> entry = getFieldAnnotation(RuleClass1.class, "stringValue", NotBlank.class);
-		NotBlankRule rule = new NotBlankRule(entry.getAnnotation(), entry.getField().getType());
+		NotBlankRule rule = new NotBlankRule(entry.getAnnotation(), entry.getField());
 		assertEquals("required: true, regex: /.*\\S.*/", rule.toRuleString());
 	}
 }

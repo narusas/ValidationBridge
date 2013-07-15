@@ -28,7 +28,7 @@ public class PatternRuleTest extends RuleTestBase {
 	@Test
 	public void regexpValue() {
 		FieldAnnotaion<Pattern> entry = getFieldAnnotation(RuleClass1.class, "regex1", Pattern.class);
-		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField().getType());
+		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField());
 		assertEquals("regex: /\\d+/", rule.toRuleString());
 	}
 	
@@ -36,28 +36,28 @@ public class PatternRuleTest extends RuleTestBase {
 	public void flagsDOTALLValue() {
 		
 		FieldAnnotaion<Pattern> entry = getFieldAnnotation(RuleClass1.class, "regex2", Pattern.class);
-		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField().getType());
+		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField());
 		assertEquals("regex: /\\d+/g", rule.toRuleString());
 	}
 	
 	@Test
 	public void flagsMULTILINEValue() {
 		FieldAnnotaion<Pattern> entry = getFieldAnnotation(RuleClass1.class, "regex3", Pattern.class);
-		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField().getType());
+		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField());
 		assertEquals("regex: /\\d+/m", rule.toRuleString());
 	}
 	
 	@Test
 	public void flagsCASE_INSENSITIVEValue() {
 		FieldAnnotaion<Pattern> entry = getFieldAnnotation(RuleClass1.class, "regex4", Pattern.class);
-		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField().getType());
+		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField());
 		assertEquals("regex: /\\d+/i", rule.toRuleString());
 	}
 	
 	@Test
 	public void flagsMultiValue() {
 		FieldAnnotaion<Pattern> entry = getFieldAnnotation(RuleClass1.class, "regex5", Pattern.class);
-		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField().getType());
+		PatternRule rule = new PatternRule(entry.getAnnotation(), entry.getField());
 		assertEquals("regex: /\\d+/gmi", rule.toRuleString());
 	}
 }

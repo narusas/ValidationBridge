@@ -1,5 +1,7 @@
 package net.narusas.jstl.validate.rules;
 
+import java.lang.reflect.Field;
+
 import lombok.Getter;
 import net.narusas.jstl.validate.ConvertRule;
 
@@ -10,7 +12,7 @@ public class LengthRule extends ConvertRule {
 	private long min;
 	private long max;
 
-	public LengthRule(Length length, Class<?> type) {
+	public LengthRule(Length length, Field field) {
 		super(length.message());
 		min = length.min();
 		max = length.max();

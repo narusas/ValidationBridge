@@ -19,14 +19,14 @@ public class NotNullRuleTest extends RuleTestBase {
 	@Test
 	public void integerType() {
 		FieldAnnotaion<NotNull> entry = getFieldAnnotation(RuleClass1.class, "integerValue", NotNull.class);
-		NotNullRule rule = new NotNullRule(entry.getAnnotation(), entry.getField().getType());
+		NotNullRule rule = new NotNullRule(entry.getAnnotation(), entry.getField());
 		assertEquals("required: true", rule.toRuleString());
 	}
 	
 	@Test
 	public void stringType() {
 		FieldAnnotaion<NotNull> entry = getFieldAnnotation(RuleClass1.class, "stringValue", NotNull.class);
-		NotNullRule rule = new NotNullRule(entry.getAnnotation(), entry.getField().getType());
+		NotNullRule rule = new NotNullRule(entry.getAnnotation(), entry.getField());
 		assertEquals("required: true", rule.toRuleString());
 	}
 

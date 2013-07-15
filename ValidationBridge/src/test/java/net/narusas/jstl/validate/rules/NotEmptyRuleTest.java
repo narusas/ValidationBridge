@@ -19,14 +19,14 @@ public class NotEmptyRuleTest extends RuleTestBase {
 	@Test
 	public void stringType() {
 		FieldAnnotaion<NotEmpty> entry = getFieldAnnotation(RuleClass1.class, "stringValue", NotEmpty.class);
-		NotEmptyRule rule = new NotEmptyRule(entry.getAnnotation(), entry.getField().getType());
+		NotEmptyRule rule = new NotEmptyRule(entry.getAnnotation(), entry.getField());
 		assertEquals("required: true", rule.toRuleString());
 	}
 
 	@Test
 	public void collectionType() {
 		FieldAnnotaion<NotEmpty> entry = getFieldAnnotation(RuleClass1.class, "collectionValue", NotEmpty.class);
-		NotEmptyRule rule = new NotEmptyRule(entry.getAnnotation(), entry.getField().getType());
+		NotEmptyRule rule = new NotEmptyRule(entry.getAnnotation(), entry.getField());
 		assertEquals("컬렉션을 자바스크립트에서 검증할 방법이 없음", "", rule.toRuleString());
 	}
 
